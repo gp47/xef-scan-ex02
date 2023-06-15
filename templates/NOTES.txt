@@ -1,0 +1,1 @@
+Example vulnerable helm code for xef scannig.
