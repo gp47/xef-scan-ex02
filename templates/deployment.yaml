@@ -59,26 +59,3 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nmap
-  labels:
-    app: nmap
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: nmap
-  template:
-    metadata:
-      labels:
-        app: nmap
-    spec:
-      containers:
-      - name: securecodebox
-        image: nmap:7.80-2
-        ports:
-        - containerPort: 80
